@@ -1,0 +1,18 @@
+# clasp / Apps Script — never commit the real project id or local clasp creds
+.clasp.json
+.clasprc.json
+
+# Local editor / OS noise
+.DS_Store
+.vscode/
+.idea/
+
+# Node (only used for local syntax checks)
+node_modules/
+
+# Scratch, patches, secrets
+*.patch
+*.log
+.env
+.env.*
+secrets*.json
