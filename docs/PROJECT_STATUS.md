@@ -23,11 +23,12 @@ verified.
 - Time-overlap conflict detection.
 - Decision logging for every What-if.
 
-Working but not directly unit-tested (see README "Implemented"): person/buffer
+Working but not directly unit-tested (see README "Implemented"): LINE signature
+verification (only signature *generation* is exercised by a test), person/buffer
 conflict detection, the conflict-resolution pending loop, last-event correction,
 postback **execution** (move execution limited to `[WHATIF_TEST]` events), and
-few-shot capture/reuse. Calendar create/update/list are covered by **integration**
-tests that hit the live API.
+few-shot capture/reuse. Calendar **create** is covered by a live **integration**
+test; update/list are not directly tested.
 
 ## Partial 🟡
 

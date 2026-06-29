@@ -10,7 +10,10 @@
 - **`.clasp.json` is gitignored** because it holds a real Apps Script project id.
   Use `.clasp.example.json` as a template.
 - **Error logs are scrubbed.** `redactSecrets_` (`20_Llm.js`) removes `key=…` and
-  `Bearer …` tokens before anything is logged.
+  `Bearer …` tokens before anything is logged, and `handleFatalError_` scrubs the
+  user-facing reply. Note one deployment boundary: `doPost`'s HTTP JSON error
+  response returns the raw error message to the relay caller — keep that relay
+  trusted and don't surface its responses publicly.
 - **Webhook authenticity** is enforced with a byte-accurate HMAC-SHA256 over the
   raw request body (`verifyLineSignature`, `40_Line.js`); can be toggled with
   `VERIFY_SIGNATURE`.

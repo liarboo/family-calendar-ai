@@ -10,11 +10,47 @@ Built on Google Apps Script. Natural-language understanding runs on an LLM
 Gemini fallback); the decision logic that ranks alternatives is deterministic and
 unit-tested.
 
-> [!NOTE]
-> **Portfolio repository.** All family data in seed files, fixtures, and examples
-> is **anonymized** (`家長A` / `家長B` / `孩子A` / `孩子B`, generic districts
-> `住家區` / `市區`). No real names, locations, credentials, or calendar/sheet IDs
-> appear anywhere in this repo or its history. See [SECURITY.md](SECURITY.md).
+> [!IMPORTANT]
+> **This is an anonymized public showcase snapshot — not the live system.**
+> - It is a read-only, cleaned snapshot for portfolio reading. The **private
+>   development repository is the source of truth**; this public repo receives only
+>   scanned, anonymized snapshots ([docs/PUBLIC_SNAPSHOT_POLICY.md](docs/PUBLIC_SNAPSHOT_POLICY.md)).
+> - The **private dev environment, credentials, Script Properties, real resource
+>   IDs, and deployment/relay setup are NOT included here.**
+> - All family data in seed files, fixtures, and examples is **anonymized**
+>   (`家長A` / `家長B` / `孩子A` / `孩子B`; generic districts `住家區` / `市區`).
+> - This is **not** a complete autonomous learning system. Below, **Verified**,
+>   **Partial**, and **Planned** features are listed separately.
+> - **Production behavior cannot be fully verified from this public snapshot** —
+>   live wiring, data, and runtime integration are validated privately.
+>
+> See [SECURITY.md](SECURITY.md) and [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md).
+
+---
+
+## How it works (the pipeline, in 7 steps)
+
+```mermaid
+flowchart LR
+    A["1. LINE natural-language input<br/>「帶孩子A去看牙醫」"] --> B["2. LLM parses intent<br/>(default Gemini)"]
+    B --> C["3. Google Calendar<br/>create / correct / query"]
+    C -->|conflict| D["4. What-if engine →<br/>ranked A / B / C options"]
+    D --> E["5. Decision log<br/>(every choice recorded)"]
+    E --> F["6. Memory / reflection<br/>(human-gated, mostly off by default)"]
+    F --> G["7. Next phase:<br/>routine sacrifice-cost +<br/>7-day candidate-slot scan"]
+```
+
+1. **LINE natural-language input** — you chat normally in a LINE group.
+2. **LLM parses intent** — turns the message into `create` / `correction` /
+   `query` / `resolve` (default provider Gemini).
+3. **Google Calendar action** — creates, corrects, or queries events.
+4. **What-if A / B / C** — on a conflict, a deterministic engine proposes ranked
+   alternatives instead of just blocking you.
+5. **Decision log** — every presented option and your pick is recorded.
+6. **Memory / reflection** — exists and is wired, but deliberately conservative:
+   most learning is human-gated and several surfaces are **off by default**.
+7. **Next phase** — a routine *sacrifice / opportunity-cost* model and a full
+   *7-day minimum-cost candidate-slot scan* (both **planned**, not built).
 
 ---
 
@@ -135,7 +171,6 @@ live I/O paths).
 
 | Feature | Test |
 |---|---|
-| LINE signature verification (byte-accurate HMAC) | `testLineSignatureFunction` |
 | LLM intent parsing + provider fallback (default Gemini) | `testLlmFallback` |
 | Time-overlap conflict detection | `testDetectTimeConflict` |
 | What-if V1 engine: generate → eliminate → cost-rank | `testWhatIfScenario…`, `testWhatIfV1…` |
@@ -147,13 +182,14 @@ live I/O paths).
 | Top-3 compact A/B/C reply | `testDecisionReplyShowsOnlyThreeCompactOptions` |
 | Profile alias learning / resolution | `testProfileAliasLearning`, `testResolvePersonAlias` |
 
-Create / update / list against Google Calendar are exercised by **integration**
-tests (`testCreateCalendarEvent`, etc.) that call the live API.
+Calendar **create** is exercised by a live **integration** test
+(`testCreateCalendarEvent`); update/list are not directly tested.
 
 ### 🟢 Implemented (working code, not directly unit-tested)
 
 | Feature | Note |
 |---|---|
+| LINE signature verification (byte-accurate HMAC) | `40_Line.js`; `testLineSignatureFunction` only generates a signature — it doesn't assert accept/reject |
 | Person & buffer conflict detection | Implemented in `30_Calendar.js`; only time-overlap has an assertion |
 | Natural-language conflict-resolution loop (pending state) | `10_Main.js` + CacheService |
 | Correction of the last event ("不是明天是週五") | `10_Main.js` |
@@ -206,6 +242,7 @@ fully-autonomous learning system.
 | [docs/WHAT_IF_ENGINE.md](docs/WHAT_IF_ENGINE.md) | The decision pipeline, sequence diagram, what's done vs next |
 | [docs/MEMORY_AND_LEARNING.md](docs/MEMORY_AND_LEARNING.md) | Every store/memory/reflection/decision-log module, input→output→when read |
 | [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md) | Verified vs partial vs planned, with the four open work items |
+| [docs/PUBLIC_SNAPSHOT_POLICY.md](docs/PUBLIC_SNAPSHOT_POLICY.md) | How this public showcase relates to the private source of truth |
 | [SECURITY.md](SECURITY.md) | Secret handling, anonymization, reporting |
 
 ---
