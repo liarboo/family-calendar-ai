@@ -1,0 +1,77 @@
+<svg width="100%" viewBox="0 0 960 690" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif">
+  <title>Capability Roadmap — a learning AI service aligned with human life</title>
+  <desc>Five stages: Perception, Life-state model and What-if, Learning loop, Agency across real and digital life, and Self-evolution.</desc>
+
+  <rect x="10" y="10" width="940" height="670" rx="18" fill="#FBFAF7" stroke="#E6E3DB" stroke-width="1"/>
+
+  <text x="44" y="50" font-size="24" font-weight="700" fill="#252522">Capability Roadmap</text>
+  <text x="44" y="76" font-size="14" fill="#5F5E58">A learning AI service aligned to human life through the calendar time-axis.</text>
+  <text x="44" y="98" font-size="14" fill="#5F5E58">以行事曆作為時間軸，讓人類生活、AI 記憶、決策、行動與學習持續對齊。</text>
+
+  <!-- connector -->
+  <line x1="86" y1="145" x2="86" y2="552" stroke="#D7D3C9" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Stage 1 -->
+  <g>
+    <rect x="44" y="122" width="872" height="76" rx="13" fill="#FFFFFF" stroke="#E6E3DB"/>
+    <circle cx="86" cy="160" r="22" fill="#DDF4EA" stroke="#5DCAA5"/>
+    <text x="86" y="166" font-size="18" font-weight="700" fill="#0F6E56" text-anchor="middle">1</text>
+    <text x="126" y="150" font-size="17" font-weight="700" fill="#252522">Perception <tspan font-weight="400" fill="#5F5E58">· 感知</tspan></text>
+    <text x="126" y="175" font-size="13.5" fill="#77766F">LINE natural language becomes the sensing layer · LINE 自然語言成為感知層</text>
+    <rect x="770" y="145" width="124" height="28" rx="14" fill="#DDF4EA" stroke="#5DCAA5"/>
+    <text x="832" y="163" font-size="12" font-weight="600" fill="#0F6E56" text-anchor="middle">Live · 已實作</text>
+  </g>
+
+  <!-- Stage 2 -->
+  <g>
+    <rect x="44" y="210" width="872" height="76" rx="13" fill="#FFFFFF" stroke="#E6E3DB"/>
+    <circle cx="86" cy="248" r="22" fill="#FAEEDA" stroke="#EF9F27"/>
+    <text x="86" y="254" font-size="18" font-weight="700" fill="#854F0B" text-anchor="middle">2</text>
+    <text x="126" y="238" font-size="17" font-weight="700" fill="#252522">Life-state model &amp; What-if <tspan font-weight="400" fill="#5F5E58">· 生活狀態模型與推演</tspan></text>
+    <text x="126" y="263" font-size="13.5" fill="#77766F">Calendar + routine + profile + constraints · 行事曆、routine、profile 與限制條件</text>
+    <rect x="764" y="233" width="130" height="28" rx="14" fill="#FAEEDA" stroke="#EF9F27"/>
+    <text x="829" y="251" font-size="12" font-weight="600" fill="#854F0B" text-anchor="middle">Partial · 部分完成</text>
+  </g>
+
+  <!-- Stage 3 -->
+  <g>
+    <rect x="44" y="298" width="872" height="76" rx="13" fill="#FFFFFF" stroke="#E6E3DB"/>
+    <circle cx="86" cy="336" r="22" fill="#FAEEDA" stroke="#EF9F27"/>
+    <text x="86" y="342" font-size="18" font-weight="700" fill="#854F0B" text-anchor="middle">3</text>
+    <text x="126" y="326" font-size="17" font-weight="700" fill="#252522">Learning loop <tspan font-weight="400" fill="#5F5E58">· 學習迴圈</tspan></text>
+    <text x="126" y="351" font-size="13.5" fill="#77766F">Feedback → memory → evaluation → adaptation · 回饋、記憶、評估與調整</text>
+    <rect x="764" y="321" width="130" height="28" rx="14" fill="#FAEEDA" stroke="#EF9F27"/>
+    <text x="829" y="339" font-size="12" font-weight="600" fill="#854F0B" text-anchor="middle">Partial · 部分完成</text>
+  </g>
+
+  <!-- Stage 4 -->
+  <g>
+    <rect x="44" y="386" width="872" height="76" rx="13" fill="#FFFFFF" stroke="#E6E3DB"/>
+    <circle cx="86" cy="424" r="22" fill="#F1EFE8" stroke="#B4B2A9"/>
+    <text x="86" y="430" font-size="18" font-weight="700" fill="#5F5E5A" text-anchor="middle">4</text>
+    <text x="126" y="414" font-size="17" font-weight="700" fill="#252522">Agency across real &amp; digital life <tspan font-weight="400" fill="#5F5E58">· 現實與數位代理</tspan></text>
+    <text x="126" y="439" font-size="13.5" fill="#77766F">Buy tickets, connect services, create social visuals · 購票、串接服務、產生社群圖像</text>
+    <rect x="764" y="409" width="130" height="28" rx="14" fill="#F1EFE8" stroke="#B4B2A9"/>
+    <text x="829" y="427" font-size="12" font-weight="600" fill="#5F5E5A" text-anchor="middle">Planned · 規劃中</text>
+  </g>
+
+  <!-- Stage 5 -->
+  <g>
+    <rect x="44" y="474" width="872" height="76" rx="13" fill="#FFFFFF" stroke="#E6E3DB"/>
+    <circle cx="86" cy="512" r="22" fill="#F1EFE8" stroke="#B4B2A9"/>
+    <text x="86" y="518" font-size="18" font-weight="700" fill="#5F5E5A" text-anchor="middle">5</text>
+    <text x="126" y="502" font-size="17" font-weight="700" fill="#252522">Self-evolution <tspan font-weight="400" fill="#5F5E58">· 自演化</tspan></text>
+    <text x="126" y="527" font-size="13.5" fill="#77766F">Detect gaps, synthesize, test, deploy, monitor, roll back · 偵測缺口、合成、測試、部署與回滾</text>
+    <rect x="764" y="497" width="130" height="28" rx="14" fill="#F1EFE8" stroke="#B4B2A9"/>
+    <text x="829" y="515" font-size="12" font-weight="600" fill="#5F5E5A" text-anchor="middle">Planned · 規劃中</text>
+  </g>
+
+  <!-- Dual loops footer -->
+  <rect x="44" y="574" width="426" height="76" rx="13" fill="#F5F8FC" stroke="#CCD8E5"/>
+  <text x="66" y="603" font-size="15" font-weight="700" fill="#294C6B">Real-life loop · 現實生活閉環</text>
+  <text x="66" y="628" font-size="13" fill="#5F6E7A">Schedule → purchase / reservation → outcome → learning</text>
+
+  <rect x="490" y="574" width="426" height="76" rx="13" fill="#F8F3FB" stroke="#D8CBE2"/>
+  <text x="512" y="603" font-size="15" font-weight="700" fill="#62417A">Digital-identity loop · 數位身分閉環</text>
+  <text x="512" y="628" font-size="13" fill="#74657D">Content → image / project action → engagement → learning</text>
+</svg>

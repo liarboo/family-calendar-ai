@@ -243,6 +243,7 @@ fully-autonomous learning system.
 | [docs/MEMORY_AND_LEARNING.md](docs/MEMORY_AND_LEARNING.md) | Every store/memory/reflection/decision-log module, input→output→when read |
 | [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md) | Verified vs partial vs planned, with the four open work items |
 | [docs/PUBLIC_SNAPSHOT_POLICY.md](docs/PUBLIC_SNAPSHOT_POLICY.md) | How this public showcase relates to the private source of truth |
+| [docs/ROADMAP.md](docs/ROADMAP.md) | The path from LINE-based scheduling to learning, real-world agency, digital identity, and self-evolution |
 | [SECURITY.md](SECURITY.md) | Secret handling, anonymization, reporting |
 
 ---
@@ -297,6 +298,10 @@ with the `log`, `examples`, `decision_log`, `profile_memory`,
 ---
 
 ## Roadmap
+
+The near-term backlog is below. For the long-term product direction — learning,
+real-world agency, digital identity, and self-evolution — see the full
+[Capability Roadmap](docs/ROADMAP.md).
 
 1. **Postback idempotency** — dedupe key per option so retried deliveries can't
    double-create.
